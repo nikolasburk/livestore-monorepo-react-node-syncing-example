@@ -1,0 +1,24 @@
+{
+  "name": "livestore-example-node-todomvc-sync-cf",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "@livestore/adapter-node": "0.4.0-dev.19",
+    "@livestore/livestore": "0.4.0-dev.19",
+    "@livestore/sync-cf": "0.4.0-dev.19",
+    "@livestore/peer-deps": "0.4.0-dev.19"
+  },
+  "devDependencies": {
+    "@livestore-monorepo/shared": "workspace:*",
+    "@types/node": "^24.9.2",
+    "typescript": "^5.9.2",
+    "tsx": "^4.21.0"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "start": "pnpm tsx src/main.ts"
+  }
+}

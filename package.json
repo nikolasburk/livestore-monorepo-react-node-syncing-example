@@ -1,0 +1,16 @@
+{
+  "name": "livestore-monorepo-syncing",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev:web": "pnpm --filter livestore-todo-app dev",
+    "dev:node": "pnpm --filter livestore-example-node-todomvc-sync-cf start",
+    "build:web": "pnpm --filter livestore-todo-app build",
+    "lint:web": "pnpm --filter livestore-todo-app lint",
+    "dev:sync": "pnpm --filter livestore-todo-app dev:worker"
+  },
+  "devDependencies": {
+    "pnpm": "^9.0.0"
+  }
+}

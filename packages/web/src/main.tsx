@@ -19,7 +19,7 @@ createRoot(document.getElementById('root')!).render(
     schema={schema}
     adapter={adapter}
     renderLoading={(_) => <div>Loading LiveStore ({_.stage})...</div>}
-    storeId="todo-db-tutorial-v5"
+    storeId="todo-db-tutorial-v6"
     batchUpdates={batchUpdates}
   >
     <App />

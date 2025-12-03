@@ -40,8 +40,8 @@ function App() {
     }
   };
 
-  const deleteTodo = (id: string, deletedAt: Date) => {
-    store.commit(events.todoDeleted({ id, deletedAt }));
+  const deleteTodo = (id: string) => {
+    store.commit(events.todoDeleted({ id }));
   };
 
   const toggleTodo = (id: string, completed: boolean) => {

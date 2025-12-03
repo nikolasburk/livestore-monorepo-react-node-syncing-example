@@ -18,7 +18,7 @@ export const tables = {
     schema: Schema.Struct({ input: Schema.String, filter: Filter }),
     default: { id: SessionIdSymbol, value: { input: '', filter: 'All' } },
   }),
-}
+} satisfies Parameters<typeof State.SQLite.makeState>[0]['tables'] as any
 
 export const events = {
   todoCreated: Events.synced({

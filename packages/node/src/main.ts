@@ -15,7 +15,7 @@ const main = async () => {
   const store = await createStorePromise({
     adapter,
     schema,
-    storeId: 'todo-db-tutorial-v5',
+    storeId: 'todo-db-tutorial-v6',
   })
 
   console.log('✅ Store initialized and syncing...')
@@ -24,9 +24,9 @@ const main = async () => {
   const todos$ = queryDb(tables.todos, { label: 'todos$' })
 
   // Subscribe to changes (this will log whenever todos change)
-  store.subscribe(todos$, (todos) => {
+  store.subscribe(todos$, (todos: typeof tables.todos.ResultType) => {
     console.log('📝 Todos updated:', todos.length, 'items')
-    todos.forEach(todo => {
+    todos.forEach((todo: typeof tables.todos.ResultType[number]) => {
       console.log(`  - ${todo.completed ? '✓' : '○'} ${todo.text}`)
     })
   })
@@ -73,7 +73,7 @@ main().catch((error) => {
 //   const store = await createStorePromise({
 //     adapter,
 //     schema,
-//     storeId: 'todo-db-tutorial-v5',
+//     storeId: 'todo-db-tutorial-v6',
 //   })
 
 //   const id = crypto.randomUUID()
